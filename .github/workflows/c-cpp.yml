@@ -11,5 +11,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
+    - name: qmake
+      run: qmake6
     - name: make
-      run: make
+      run: make install
