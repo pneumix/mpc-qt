@@ -11,7 +11,15 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
+
+    - name: Install APT dependencies
+      shell: bash
+      run: |
+          choco install qmake6
+
     - name: qmake
       run: qmake6
     - name: make
       run: make install
+
+
